@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/curly_water.png-ff4b8b6de51a5f3522c9bd52c306c
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

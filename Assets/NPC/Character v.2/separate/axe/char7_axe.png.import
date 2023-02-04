@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/char7_axe.png-97f04f2dcde0562d6a1fc81a0cef1bb
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/spooky_pickup.png-e5f4c6f955e1288cd09ab403433
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
