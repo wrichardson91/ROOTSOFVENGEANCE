@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/shoes_carry.png-8e3ff6df3bb6f6a7b7443399b89ec
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/emoticons.png-b55f9fee1a6eacff8448e92d8c92008
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

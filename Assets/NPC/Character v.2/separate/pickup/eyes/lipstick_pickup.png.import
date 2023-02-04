@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/lipstick_pickup.png-87fb31ad3d8235d11ea9ce6f4
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/skull_fish.png-8ff51c563db29e2c27ac0f2413796c
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

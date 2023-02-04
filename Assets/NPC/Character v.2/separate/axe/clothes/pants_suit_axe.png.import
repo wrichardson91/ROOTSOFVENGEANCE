@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/pants_suit_axe.png-8f75a6bff3c8b638a69c99e24b
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/pants_block.png-b4e499d637db42d28b78b8759ddf2
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

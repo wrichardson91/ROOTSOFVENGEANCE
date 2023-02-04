@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/char8_water_without.png-1aa90e87d1f0b7c1882f3
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

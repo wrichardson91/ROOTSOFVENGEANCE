@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/char3_pickup.png-c1f72d2d9fe06e2c4256c6f63ab0
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

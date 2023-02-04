@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/buzzcut_hurt.png-1bd6da2e4b0aaeb76fe4a0f24324
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

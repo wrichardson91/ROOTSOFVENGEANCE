@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/stripe_pickaxe.png-f56b6b562d5b9d465e27fb1ece
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

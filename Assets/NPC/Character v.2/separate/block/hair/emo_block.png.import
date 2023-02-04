@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/emo_block.png-3bca4c708f01d3cf38226584e4f5f53
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
