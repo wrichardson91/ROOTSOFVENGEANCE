@@ -11,5 +11,4 @@ texture = ExtResource("1_xm3cv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 323)
-scale = Vector2(1, 1)
 position_smoothing_enabled = true

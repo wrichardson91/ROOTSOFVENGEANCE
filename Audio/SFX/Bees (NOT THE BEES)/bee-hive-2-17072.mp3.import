@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ibp3fhnglp7j"
+path="res://.godot/imported/bee-hive-2-17072.mp3-4994447ecd6cd909f190e27e2d32a07f.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/Bees (NOT THE BEES)/bee-hive-2-17072.mp3"
+dest_files=["res://.godot/imported/bee-hive-2-17072.mp3-4994447ecd6cd909f190e27e2d32a07f.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwt74c22jye5r"
+path="res://.godot/imported/many-bees-flying-around-27383.mp3-82e4c99f326ea970e6cda3945aa7e7f1.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/Bees (NOT THE BEES)/many-bees-flying-around-27383.mp3"
+dest_files=["res://.godot/imported/many-bees-flying-around-27383.mp3-82e4c99f326ea970e6cda3945aa7e7f1.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
