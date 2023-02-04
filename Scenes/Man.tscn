@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://7pnha82f82m7"]
+
+[ext_resource type="Texture2D" uid="uid://57gd8k8172v5" path="res://Assets/NPC/Man/Sprite Sheet.png" id="1_4gwpv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w18pq"]
+radius = 7.0
+height = 24.0
+
+[node name="Node2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4gwpv")
+hframes = 8
+vframes = 48
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_w18pq")
