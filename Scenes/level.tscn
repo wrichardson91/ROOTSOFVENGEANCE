@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://bkmbadpx6oqhd"]
+[gd_scene load_steps=14 format=3 uid="uid://bkmbadpx6oqhd"]
 
+[ext_resource type="Script" path="res://Scenes/level.gd" id="1_5wtre"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="1_qclds"]
 [ext_resource type="Texture2D" uid="uid://b65748a22wsv8" path="res://Assets/Trees/tree.png" id="1_xm3cv"]
 [ext_resource type="Texture2D" uid="uid://dq3xq06ln6ggw" path="res://Assets/Grass/grasstileset.png" id="2_qk4jx"]
@@ -1202,6 +1203,7 @@ sources/2 = SubResource("TileSetAtlasSource_btums")
 sources/3 = SubResource("TileSetAtlasSource_splv5")
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_5wtre")
 
 [node name="Sky Box" type="Sprite2D" parent="."]
 position = Vector2(601, 103)
