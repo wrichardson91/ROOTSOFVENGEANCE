@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkmbadpx6oqhd"]
+[gd_scene load_steps=13 format=3 uid="uid://bkmbadpx6oqhd"]
 
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="1_qclds"]
 [ext_resource type="Texture2D" uid="uid://b65748a22wsv8" path="res://Assets/Trees/tree.png" id="1_xm3cv"]
 [ext_resource type="Texture2D" uid="uid://dq3xq06ln6ggw" path="res://Assets/Grass/grasstileset.png" id="2_qk4jx"]
 [ext_resource type="Texture2D" uid="uid://d32fplllgveex" path="res://Assets/Water/Water+.png" id="3_kkmsl"]
 [ext_resource type="Texture2D" uid="uid://obg5mvcf4jf6" path="res://Assets/Pathway/Stone pathway tileset (2).png" id="4_b0hhg"]
+[ext_resource type="Texture2D" uid="uid://baegi11wpo7mb" path="res://Assets/Fence/fence.png" id="5_hti7a"]
+[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="7_nsvh7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
 texture = ExtResource("2_qk4jx")
@@ -1188,11 +1190,16 @@ texture = ExtResource("4_b0hhg")
 6:39/0 = 0
 7:39/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_splv5"]
+texture = ExtResource("5_hti7a")
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_13n6m"]
 terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_ehu3y")
 sources/1 = SubResource("TileSetAtlasSource_iaywi")
 sources/2 = SubResource("TileSetAtlasSource_btums")
+sources/3 = SubResource("TileSetAtlasSource_splv5")
 
 [node name="Level" type="Node2D"]
 
@@ -1213,6 +1220,14 @@ texture = ExtResource("1_xm3cv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 323)
+limit_left = 0
+limit_top = 0
+limit_right = 1160
+limit_bottom = 640
+limit_smoothed = true
 position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("7_nsvh7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

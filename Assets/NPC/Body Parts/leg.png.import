@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baegi11wpo7mb"
-path="res://.godot/imported/fence.png-11cfb49991bde13c66fb3fda01b41ca8.ctex"
+uid="uid://bixiy4owaxi8n"
+path="res://.godot/imported/leg.png-c801675b5e46dca0b86f7b8e702501a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fence/fence.png"
-dest_files=["res://.godot/imported/fence.png-11cfb49991bde13c66fb3fda01b41ca8.ctex"]
+source_file="res://Assets/NPC/Body Parts/leg.png"
+dest_files=["res://.godot/imported/leg.png-c801675b5e46dca0b86f7b8e702501a6.ctex"]
 
 [params]
 
