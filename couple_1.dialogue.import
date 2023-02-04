@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_4"
+type="Resource"
+uid="uid://dcmwsq676qjw5"
+path="res://.godot/imported/couple_1.dialogue-1c84f61c28992cb56141ed9068635f9e.tres"
+
+[deps]
+
+source_file="res://couple_1.dialogue"
+dest_files=["res://.godot/imported/couple_1.dialogue-1c84f61c28992cb56141ed9068635f9e.tres"]
+
+[params]
+
