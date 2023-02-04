@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjjklqys6ntm6"
+path="res://.godot/imported/Rapier Fencing Whoosh Impact-004.wav-c65a2ee6e5a5d672bd27868033b11310.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Clattering (Misc)/Rapier Fencing Whoosh Impact-004.wav"
+dest_files=["res://.godot/imported/Rapier Fencing Whoosh Impact-004.wav-c65a2ee6e5a5d672bd27868033b11310.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

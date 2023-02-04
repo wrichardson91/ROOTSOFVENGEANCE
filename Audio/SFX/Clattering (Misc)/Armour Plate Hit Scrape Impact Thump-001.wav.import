@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://coc62bk7at2a8"
+path="res://.godot/imported/Armour Plate Hit Scrape Impact Thump-001.wav-4e650e5aac64f9142375279c89541e2c.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Clattering (Misc)/Armour Plate Hit Scrape Impact Thump-001.wav"
+dest_files=["res://.godot/imported/Armour Plate Hit Scrape Impact Thump-001.wav-4e650e5aac64f9142375279c89541e2c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpcp5kcf6lu18"
+path="res://.godot/imported/TOOLPowr_Bench Grinder Operating Medium_KRTS_MD-001.wav-b278c66fc7416c693211aaf3c0088d52.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Death Devices/TOOLPowr_Bench Grinder Operating Medium_KRTS_MD-001.wav"
+dest_files=["res://.godot/imported/TOOLPowr_Bench Grinder Operating Medium_KRTS_MD-001.wav-b278c66fc7416c693211aaf3c0088d52.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
