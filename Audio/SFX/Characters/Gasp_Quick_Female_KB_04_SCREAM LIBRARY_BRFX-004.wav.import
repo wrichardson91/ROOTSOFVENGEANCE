@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drvp6kvnq1n08"
+path="res://.godot/imported/Gasp_Quick_Female_KB_04_SCREAM LIBRARY_BRFX-004.wav-ca60c9f97b37b664052274e4791c870d.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Characters/Gasp_Quick_Female_KB_04_SCREAM LIBRARY_BRFX-004.wav"
+dest_files=["res://.godot/imported/Gasp_Quick_Female_KB_04_SCREAM LIBRARY_BRFX-004.wav-ca60c9f97b37b664052274e4791c870d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
