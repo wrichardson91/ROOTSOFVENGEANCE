@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfbx4jhlvhglo" path="res://Assets/Trees/acorn.png" id="1_m4sxo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wvd7p"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_72823"]
 radius = 4.12311
 
 [node name="Node" type="Node"]
@@ -13,4 +13,4 @@ texture = ExtResource("1_m4sxo")
 [node name="Area2D" type="Area2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-shape = SubResource("CircleShape2D_wvd7p")
+shape = SubResource("CircleShape2D_72823")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgn4nuk01g26a"
+path="res://.godot/imported/TheLibrarybyMTC_UI_GlassTicks_25.wav-405792f308d7043bcc5764154ef4134d.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Menu UI/TheLibrarybyMTC_UI_GlassTicks_25.wav"
+dest_files=["res://.godot/imported/TheLibrarybyMTC_UI_GlassTicks_25.wav-405792f308d7043bcc5764154ef4134d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
