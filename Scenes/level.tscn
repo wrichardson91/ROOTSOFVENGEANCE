@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkmbadpx6oqhd"]
+
+[ext_resource type="Texture2D" uid="uid://b65748a22wsv8" path="res://Assets/Trees/tree.png" id="1_xm3cv"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(573, 206)
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("1_xm3cv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(579, 323)
+scale = Vector2(1, 1)
+position_smoothing_enabled = true
