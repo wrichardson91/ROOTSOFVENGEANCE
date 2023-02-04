@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dl5whnqiy4qg8"
+path="res://.godot/imported/vintage_radio_button_006.wav-eef0a0129da3a7b58ab66ce8198268c1.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Menu UI/vintage_radio_button_006.wav"
+dest_files=["res://.godot/imported/vintage_radio_button_006.wav-eef0a0129da3a7b58ab66ce8198268c1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
