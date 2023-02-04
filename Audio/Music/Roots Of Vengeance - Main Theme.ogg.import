@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgcj3miux48ti"
+path="res://.godot/imported/Roots Of Vengeance - Main Theme.ogg-06640014512400800faf6f67c4ca76ec.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Roots Of Vengeance - Main Theme.ogg"
+dest_files=["res://.godot/imported/Roots Of Vengeance - Main Theme.ogg-06640014512400800faf6f67c4ca76ec.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=83.0
+beat_count=0
+bar_beats=4

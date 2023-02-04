@@ -1214,3 +1214,5 @@ texture = ExtResource("1_xm3cv")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(579, 323)
 position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
