@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://q7ya3ytrlx13"]
+
+[ext_resource type="Script" path="res://Scenes/shed.gd" id="1_y03c2"]
+[ext_resource type="Texture2D" uid="uid://bp0i4b3jgm84u" path="res://Assets/scenery/shed.png" id="2_3ppd7"]
+[ext_resource type="AudioStream" uid="uid://bjsarbkvltvp8" path="res://Audio/SFX/AcornPebble Thud/single-rock-hitting-wood-4-103705.mp3" id="3_8e6dv"]
+
+[node name="Node2D" type="Area2D"]
+collision_layer = 3
+collision_mask = 7
+script = ExtResource("1_y03c2")
+
+[node name="Shed" type="Sprite2D" parent="."]
+position = Vector2(18.6, -14.7)
+texture = ExtResource("2_3ppd7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(18.6, -14.7)
+stream = ExtResource("3_8e6dv")
+volume_db = -0.533
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-46, 49, -46, -49, 4, -74, 39, -69, 83, -41, 76, -36, 76, 50)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
