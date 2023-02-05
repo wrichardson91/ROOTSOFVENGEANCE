@@ -1,0 +1,93 @@
+[gd_scene load_steps=16 format=3 uid="uid://dqvpisqdpny13"]
+
+[ext_resource type="Texture2D" uid="uid://b36wsgomoiiqc" path="res://Assets/objects/mower.png" id="1_2nlsb"]
+[ext_resource type="Script" path="res://Scenes/lawnmower.gd" id="1_ceet7"]
+[ext_resource type="AudioStream" uid="uid://djilpsxw4lt40" path="res://Audio/SFX/acorn thud.wav" id="3_lic5k"]
+[ext_resource type="Texture2D" uid="uid://2exyuqt5phq3" path="res://Assets/objects/mowerrunning.png" id="3_rg7d1"]
+[ext_resource type="AudioStream" uid="uid://ksbc0ci1itqk" path="res://Audio/SFX/engine_sputter.wav" id="4_j4fk3"]
+[ext_resource type="AudioStream" uid="uid://d1lp6w7swei4f" path="res://Audio/SFX/mower_run.ogg" id="5_7p66i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si0ts"]
+atlas = ExtResource("3_rg7d1")
+region = Rect2(0, 0, 24, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxond"]
+atlas = ExtResource("3_rg7d1")
+region = Rect2(24, 0, 24, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n88pk"]
+atlas = ExtResource("3_rg7d1")
+region = Rect2(48, 0, 24, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5vha"]
+atlas = ExtResource("3_rg7d1")
+region = Rect2(72, 0, 24, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34kj2"]
+atlas = ExtResource("3_rg7d1")
+region = Rect2(96, 0, 24, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk207"]
+atlas = ExtResource("3_rg7d1")
+region = Rect2(120, 0, 24, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pkcs"]
+animations = [{
+"frames": [ExtResource("1_2nlsb")],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [SubResource("AtlasTexture_si0ts"), SubResource("AtlasTexture_dxond"), SubResource("AtlasTexture_n88pk"), SubResource("AtlasTexture_f5vha"), SubResource("AtlasTexture_34kj2"), SubResource("AtlasTexture_nk207")],
+"loop": true,
+"name": &"running",
+"speed": 20.0
+}, {
+"frames": [ExtResource("1_2nlsb")],
+"loop": true,
+"name": &"sputter",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni106"]
+size = Vector2(30, 18.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgf7u"]
+size = Vector2(27, 15.5)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+mass = 100.0
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+
+[node name="lawnmower" type="Node2D" parent="."]
+script = ExtResource("1_ceet7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="lawnmower"]
+scale = Vector2(2, 2)
+frames = SubResource("SpriteFrames_3pkcs")
+animation = &"idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lawnmower/AnimatedSprite2D"]
+
+[node name="Area2D" type="Area2D" parent="lawnmower"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lawnmower/Area2D"]
+position = Vector2(-9, 9)
+shape = SubResource("RectangleShape2D_ni106")
+
+[node name="audiothud" type="AudioStreamPlayer" parent="lawnmower"]
+stream = ExtResource("3_lic5k")
+
+[node name="enginesput" type="AudioStreamPlayer" parent="lawnmower"]
+stream = ExtResource("4_j4fk3")
+
+[node name="enginerun" type="AudioStreamPlayer" parent="lawnmower"]
+stream = ExtResource("5_7p66i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 10)
+shape = SubResource("RectangleShape2D_fgf7u")
+
+[connection signal="body_entered" from="lawnmower/Area2D" to="lawnmower" method="_on_area_2d_body_entered"]
