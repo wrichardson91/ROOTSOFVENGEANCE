@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bkmbadpx6oqhd"]
+[gd_scene load_steps=16 format=3 uid="uid://bkmbadpx6oqhd"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_5wtre"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="1_qclds"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://baegi11wpo7mb" path="res://Assets/Fence/fence.png" id="5_hti7a"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="7_nsvh7"]
 [ext_resource type="PackedScene" uid="uid://5xal3bchsiv8" path="res://Scenes/house interactions.tscn" id="9_nb22e"]
+[ext_resource type="PackedScene" uid="uid://ddvw5yivgfx2s" path="res://Scenes/PottedPlant.tscn" id="10_disrh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
 texture = ExtResource("2_qk4jx")
@@ -1240,3 +1241,6 @@ script = ExtResource("7_nsvh7")
 
 [node name="house interactions" parent="." instance=ExtResource("9_nb22e")]
 position = Vector2(998, 302)
+
+[node name="PottedPlant" parent="." instance=ExtResource("10_disrh")]
+position = Vector2(860, 388)
