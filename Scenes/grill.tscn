@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://c5lh4ul3sq85o"]
+
+[ext_resource type="Texture2D" uid="uid://db173retfmh3t" path="res://Assets/objects/grill.png" id="1_6vfp2"]
+[ext_resource type="Script" path="res://Scenes/grill.gd" id="2_1pomn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl4p5"]
+atlas = ExtResource("1_6vfp2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr5fi"]
+atlas = ExtResource("1_6vfp2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1clc"]
+atlas = ExtResource("1_6vfp2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvfbq"]
+atlas = ExtResource("1_6vfp2")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81ve4"]
+atlas = ExtResource("1_6vfp2")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnljm"]
+atlas = ExtResource("1_6vfp2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68hxi"]
+animations = [{
+"frames": [SubResource("AtlasTexture_jl4p5")],
+"loop": false,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [SubResource("AtlasTexture_xr5fi"), SubResource("AtlasTexture_p1clc"), SubResource("AtlasTexture_hvfbq"), SubResource("AtlasTexture_81ve4")],
+"loop": true,
+"name": &"onFire",
+"speed": 5.0
+}, {
+"frames": [SubResource("AtlasTexture_gnljm")],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ti2l7"]
+size = Vector2(25, 20)
+
+[sub_resource type="GDScript" id="GDScript_i22e4"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.
+"
+
+[node name="grill" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_68hxi")
+animation = &"closed"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_1pomn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+root_node = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_ti2l7")
+script = SubResource("GDScript_i22e4")
+
+[connection signal="body_entered" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
