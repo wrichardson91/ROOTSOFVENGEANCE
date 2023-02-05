@@ -14,7 +14,7 @@ func _process(delta):
 func _on_start_button_pressed():
 	$Click.play()
 	await($Click.finished)
-	get_tree().change_scene_to_file("res://Scenes/level.tscn")
+	get_tree().change_scene_to_file("res://intro_cut.tscn")
 
 
 func _on_quit_button_pressed():
