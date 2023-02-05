@@ -15,9 +15,6 @@ func _process(deltca):
 	
 func _input(event):
 	if event is InputEventMouseMotion:
-		print($Camera2D)
-		print($Camera2D.get_screen_center_position())
-		print($Camera2D.position)
 		$Camera2D.position.x = event.position.x + ($Camera2D.get_viewport_rect().size.x / 4)
-		print($Camera2D.position)
+
 

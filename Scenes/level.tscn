@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bkmbadpx6oqhd"]
+[gd_scene load_steps=24 format=3 uid="uid://bkmbadpx6oqhd"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_5wtre"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="1_qclds"]
@@ -14,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://7pnha82f82m7" path="res://Scenes/Man.tscn" id="12_dibgn"]
 [ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="13_ph18u"]
 [ext_resource type="PackedScene" uid="uid://cugoiq1oqbudn" path="res://treeman.tscn" id="14_qbyba"]
-[ext_resource type="PackedScene" uid="uid://cmtvam12ct1dx" path="res://Leaf.tscn" id="15_tcmg5"]
+[ext_resource type="PackedScene" uid="uid://dbu1euf17uerd" path="res://evil_plant.tscn" id="15_pky4p"]
+[ext_resource type="PackedScene" uid="uid://deqkgu3h05liu" path="res://window.tscn" id="16_jo4mr"]
+[ext_resource type="PackedScene" uid="uid://2mijc3swp2ud" path="res://Scenes/POOL_INTERACTIONS.tscn" id="17_mfmtq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_twboj"]
 texture = ExtResource("2_qk4jx")
@@ -1281,19 +1283,15 @@ scale = Vector2(2.5, 2.5)
 
 [node name="Treeman" parent="." instance=ExtResource("14_qbyba")]
 
-[node name="Leaf" parent="." instance=ExtResource("15_tcmg5")]
-position = Vector2(304, 270)
+[node name="EvilPlant" parent="." instance=ExtResource("15_pky4p")]
+position = Vector2(855, 390)
 
-[node name="Leaf2" parent="." instance=ExtResource("15_tcmg5")]
-position = Vector2(350, 355)
+[node name="WindowPane" parent="." instance=ExtResource("16_jo4mr")]
+position = Vector2(998, 300)
+scale = Vector2(2.04664, 2.05486)
 
-[node name="Leaf3" parent="." instance=ExtResource("15_tcmg5")]
-position = Vector2(262, 137)
-
-[node name="Leaf4" parent="." instance=ExtResource("15_tcmg5")]
-position = Vector2(108, 199)
-
-[node name="Leaf5" parent="." instance=ExtResource("15_tcmg5")]
-position = Vector2(127, 355)
+[node name="POOL_INTERACTIONS" parent="." instance=ExtResource("17_mfmtq")]
+position = Vector2(319, 529)
+scale = Vector2(1.4, 2.5)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
