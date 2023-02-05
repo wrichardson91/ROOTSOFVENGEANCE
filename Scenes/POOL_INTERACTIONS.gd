@@ -1,6 +1,6 @@
-extends RigidBody2D
+extends Node2D
 
-var gravityOff: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,10 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 
-func launch(force: Vector2):
-	print("FORCE-------------", force )
-	$".".apply_impulse(force)
 
-func freeze():
-	$".".freeze_mode = 1
-	pass
+
+func _on_area_2d_body_entered(body):
+	body.freeze()
+	pass # Replace with function body.

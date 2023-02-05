@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://2mijc3swp2ud"]
+[gd_scene load_steps=11 format=3 uid="uid://2mijc3swp2ud"]
 
+[ext_resource type="Script" path="res://Scenes/POOL_INTERACTIONS.gd" id="1_acfdl"]
 [ext_resource type="Texture2D" uid="uid://dnob615h385g7" path="res://Assets/Water/pool_idle.png" id="1_b0hkr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tp5f7"]
@@ -34,9 +35,21 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56yjd"]
+size = Vector2(312, 56)
+
 [node name="POOL_INTERACTIONS" type="Node2D"]
+script = ExtResource("1_acfdl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(160, 32)
 frames = SubResource("SpriteFrames_mi66d")
 playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(161, 32)
+shape = SubResource("RectangleShape2D_56yjd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
