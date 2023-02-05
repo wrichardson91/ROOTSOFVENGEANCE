@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddvw5yivgfx2s"]
+
+[ext_resource type="Texture2D" uid="uid://2wx07xc3frjc" path="res://Assets/objects/potted plant.png" id="1_0ufcf"]
+
+[node name="PottedPlant" type="Node2D"]
+
+[node name="PottedPlant" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ufcf")
