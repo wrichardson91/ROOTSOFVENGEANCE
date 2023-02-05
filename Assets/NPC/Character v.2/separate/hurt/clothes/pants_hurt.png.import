@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/pants_hurt.png-8d8020e2339347b34de01df7b9e12e
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

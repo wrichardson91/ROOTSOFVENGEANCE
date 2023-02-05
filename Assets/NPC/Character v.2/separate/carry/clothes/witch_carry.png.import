@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/witch_carry.png-391d2a115cb4c9b3d8ff75d12c7f9
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

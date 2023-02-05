@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/skull_walk.png-b09d8c7832f9c7fccfee42a4d1f6f0
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

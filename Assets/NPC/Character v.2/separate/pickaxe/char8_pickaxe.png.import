@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/char8_pickaxe.png-d60fd3f8b456de8e1f0a13f5ee5
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
