@@ -2,7 +2,9 @@ extends Node2D
 
 var womanwalk_2 = preload("res://Scenes/woman_walk_2.tscn")
 var womanwalk_2out = preload("res://Scenes/woman_walk_2_out.tscn")
+var womanwalk_3 = preload("res://Scenes/woman_walk_3.tscn")
 var womanwalk2 = womanwalk_2.instantiate()
+var womanwalk3 = womanwalk_3.instantiate()
 signal pptimerend
 var planttalk = false
 var ww2walked = false
@@ -18,8 +20,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-	
+	if EventManager.didKnockOnWindow and EventManager.leafPoolFull:
+		add_child(womanwalk3)
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		$Camera2D.position.x = event.position.x + ($Camera2D.get_viewport_rect().size.x / 4)

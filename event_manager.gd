@@ -50,7 +50,11 @@ func hitWindowWithAcorn():
 	didKnockOnWindow = true
 	print("pow", windowCounter, didKnockOnWindow)
 	emit_signal("AcornHitWindow")
-	
+
+func addLeafToPool():
+	if didHitPlant:
+		leafCounter += 1
+		
 func HitPlantWithAcorn():
 	plantCounter += 1
 	didHitPlant = true

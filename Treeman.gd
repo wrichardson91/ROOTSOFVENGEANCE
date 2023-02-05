@@ -38,6 +38,7 @@ func _input(event):
 			leaf_launch = false
 			leaf_instance = leaf.instantiate()
 			leaf_instance.position = event.position
+			EventManager.addLeafToPool()
 			add_child(leaf_instance) 
 		else:
 			leaf_spawned = false
