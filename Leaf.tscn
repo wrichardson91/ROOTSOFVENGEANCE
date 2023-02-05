@@ -3,22 +3,22 @@
 [ext_resource type="Script" path="res://Leaf.gd" id="1_lc23q"]
 [ext_resource type="Texture2D" uid="uid://dqna8pp22bnpx" path="res://Assets/Trees/leaves.png" id="2_2c0qo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1c545"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pmou7"]
 radius = 16.0312
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_o3278"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_2d10g"]
 radius = 17.0294
 
 [node name="Leaf" type="RigidBody2D"]
 script = ExtResource("1_lc23q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_1c545")
+shape = SubResource("CircleShape2D_pmou7")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_o3278")
+shape = SubResource("CircleShape2D_2d10g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.71875, 0.71875)
