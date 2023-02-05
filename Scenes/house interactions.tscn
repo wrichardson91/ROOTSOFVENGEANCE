@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://5xal3bchsiv8"]
+
+[ext_resource type="Texture2D" uid="uid://cmb8x8y7twugk" path="res://Assets/house/house exterior.png" id="1_tu2w6"]
+[ext_resource type="Texture2D" uid="uid://cy6drekp24fst" path="res://Assets/house/window panes.png" id="2_sowk3"]
+
+[node name="house interactions" type="Node2D"]
+
+[node name="HouseExterior" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_tu2w6")
+
+[node name="WindowPanes" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_sowk3")

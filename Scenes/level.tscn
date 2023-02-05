@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkmbadpx6oqhd"]
+[gd_scene load_steps=15 format=3 uid="uid://bkmbadpx6oqhd"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_5wtre"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="1_qclds"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://obg5mvcf4jf6" path="res://Assets/Pathway/Stone pathway tileset (2).png" id="4_b0hhg"]
 [ext_resource type="Texture2D" uid="uid://baegi11wpo7mb" path="res://Assets/Fence/fence.png" id="5_hti7a"]
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="7_nsvh7"]
+[ext_resource type="PackedScene" uid="uid://5xal3bchsiv8" path="res://Scenes/house interactions.tscn" id="9_nb22e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
 texture = ExtResource("2_qk4jx")
@@ -1236,3 +1237,6 @@ drag_vertical_enabled = true
 script = ExtResource("7_nsvh7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="house interactions" parent="." instance=ExtResource("9_nb22e")]
+position = Vector2(998, 302)
