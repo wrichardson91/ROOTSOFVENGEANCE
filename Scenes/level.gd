@@ -1,8 +1,15 @@
 extends Node2D
 
+var womanwalk_2 = preload("res://Scenes/woman_walk_2.tscn")
+var womanwalk_2out = preload("res://Scenes/woman_walk_2_out.tscn")
+var womanwalk2 = womanwalk_2.instantiate()
+signal pptimerend
+var planttalk = false
+var ww2walked = false
+
 var bgmusic = $AudioStreamPlayer
 var introtimer = $Timer
-
+@onready var timelineend = Dialogic.connect("timeline_ended", ww2_out)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,7 +17,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(deltca):
+func _process(delta):
 	pass
 	
 func _input(event):
@@ -21,3 +28,26 @@ func _input(event):
 		$Camera2D.position.x = event.position.x + ($Camera2D.get_viewport_rect().size.x / 4)
 		print($Camera2D.position)
 
+
+#Woman Walk out Timer Triggers
+func _on_timer_timeout():
+	$ww2_timer.start()
+	add_child(womanwalk2)
+
+func _on_ww_2_timer_timeout():
+	Dialogic.start("pot_water")
+	
+func ww2_out():
+	remove_child(womanwalk2)
+	if ww2walked == false:
+		var ww2_out = womanwalk_2out.instantiate()
+		ww2walked = true
+		add_child(ww2_out)
+		$pp_timer1.start()
+	
+func _on_pp_timer_1_timeout():
+	$pp_timer1.one_shot = true
+	if planttalk == false:
+		Dialogic.start("pot_conv1")
+		planttalk = true
+			

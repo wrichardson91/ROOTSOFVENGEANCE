@@ -366,9 +366,9 @@ editor/character_preview_mode=1
 editor/current_editor=&"Timeline Editor"
 editor/current_resources={
 "Character Editor": "res://Dialogue Docs/Potted Plant.dch",
-"Timeline Editor": "res://Dialogue Docs/pot_conv1.dtl"
+"Timeline Editor": "res://Dialogue Docs/pot_conv2.dtl"
 }
-editor/last_resources=["res://Dialogue Docs/couple_talk1.dtl", "res://Dialogue Docs/pot_conv1.dtl", "res://Dialogue Docs/Potted Plant.dch", "res://Dialogue Docs/Laura.dch", "res://Dialogue Docs/Doug.dch", "res://Dialogue Docs/pot_murder1.dtl", "res://Dialogue Docs/pot_conv3.dtl", "res://Dialogue Docs/pot_water.dtl", "res://Dialogue Docs/pot_conv2.dtl"]
+editor/last_resources=["res://Dialogue Docs/pot_conv1.dtl", "res://Dialogue Docs/pot_conv2.dtl", "res://Dialogue Docs/pot_conv3.dtl", "res://Dialogue Docs/pot_water.dtl", "res://Dialogue Docs/couple_talk1.dtl", "res://Dialogue Docs/Potted Plant.dch", "res://Dialogue Docs/Laura.dch", "res://Dialogue Docs/Doug.dch", "res://Dialogue Docs/pot_murder1.dtl"]
 editor/current_timeline_path="res://Dialogue Docs/pot_conv1.dtl"
 animations/join_default_length=0.5
 animations/leave_default_length=0.5
