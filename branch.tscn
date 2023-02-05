@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7osaj3q5kcvb"]
+
+[ext_resource type="Script" path="res://branch.gd" id="1_7dkjr"]
+[ext_resource type="Texture2D" uid="uid://c3gjwkasrj7in" path="res://Assets/objects/tree_branch.png" id="1_au62a"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6w8l4"]
+height = 62.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o28nj"]
+radius = 17.0
+height = 62.0
+
+[node name="Branch" type="RigidBody2D"]
+script = ExtResource("1_7dkjr")
+
+[node name="BranchSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_au62a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6w8l4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_o28nj")
