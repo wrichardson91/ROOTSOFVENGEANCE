@@ -5,11 +5,11 @@
 [ext_resource type="Script" path="res://Scenes/Man.gd" id="3_oxfjf"]
 [ext_resource type="PackedScene" uid="uid://7pnha82f82m7" path="res://Scenes/Man.tscn" id="4_5fwbb"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjj1k"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w18pq"]
 radius = 7.0
 height = 24.0
 
-[sub_resource type="Animation" id="Animation_h6f4u"]
+[sub_resource type="Animation" id="Animation_1mspd"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [16]
 }
 
-[sub_resource type="Animation" id="Animation_uqmka"]
+[sub_resource type="Animation" id="Animation_0785v"]
 resource_name = "idle_left"
 length = 0.1
 tracks/0/type = "value"
@@ -40,7 +40,7 @@ tracks/0/keys = {
 "values": [24]
 }
 
-[sub_resource type="Animation" id="Animation_tgg2w"]
+[sub_resource type="Animation" id="Animation_p2t40"]
 resource_name = "idle_right"
 length = 0.1
 tracks/0/type = "value"
@@ -56,7 +56,7 @@ tracks/0/keys = {
 "values": [16]
 }
 
-[sub_resource type="Animation" id="Animation_f43lx"]
+[sub_resource type="Animation" id="Animation_u6wxu"]
 resource_name = "walk_down"
 length = 0.8
 loop_mode = 1
@@ -73,7 +73,7 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 0]
 }
 
-[sub_resource type="Animation" id="Animation_n48c2"]
+[sub_resource type="Animation" id="Animation_tdb7t"]
 resource_name = "walk_left"
 length = 0.8
 loop_mode = 1
@@ -90,7 +90,7 @@ tracks/0/keys = {
 "values": [24, 25, 26, 27, 28, 29, 30, 31, 24]
 }
 
-[sub_resource type="Animation" id="Animation_i6bwy"]
+[sub_resource type="Animation" id="Animation_mj3v2"]
 resource_name = "walk_right"
 length = 0.8
 loop_mode = 1
@@ -107,7 +107,7 @@ tracks/0/keys = {
 "values": [16, 17, 18, 19, 20, 21, 22, 23, 16]
 }
 
-[sub_resource type="Animation" id="Animation_5vtfs"]
+[sub_resource type="Animation" id="Animation_sxc3h"]
 resource_name = "walk_up"
 length = 0.8
 loop_mode = 1
@@ -124,18 +124,18 @@ tracks/0/keys = {
 "values": [8, 9, 10, 11, 12, 13, 14, 15, 8]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_i32ln"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcloc"]
 _data = {
-"RESET": SubResource("Animation_h6f4u"),
-"idle_left": SubResource("Animation_uqmka"),
-"idle_right": SubResource("Animation_tgg2w"),
-"walk_down": SubResource("Animation_f43lx"),
-"walk_left": SubResource("Animation_n48c2"),
-"walk_right": SubResource("Animation_i6bwy"),
-"walk_up": SubResource("Animation_5vtfs")
+"RESET": SubResource("Animation_1mspd"),
+"idle_left": SubResource("Animation_0785v"),
+"idle_right": SubResource("Animation_p2t40"),
+"walk_down": SubResource("Animation_u6wxu"),
+"walk_left": SubResource("Animation_tdb7t"),
+"walk_right": SubResource("Animation_mj3v2"),
+"walk_up": SubResource("Animation_sxc3h")
 }
 
-[sub_resource type="Curve2D" id="Curve2D_4ehk7"]
+[sub_resource type="Curve2D" id="Curve2D_16m3b"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 964, 480, -45.7293, 0.921877, 45.7293, -0.921877, 1095, 479)
 }
@@ -152,16 +152,16 @@ frame = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
-shape = SubResource("CapsuleShape2D_bjj1k")
+shape = SubResource("CapsuleShape2D_w18pq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_i32ln")
+"": SubResource("AnimationLibrary_tcloc")
 }
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-77, -95)
-curve = SubResource("Curve2D_4ehk7")
+curve = SubResource("Curve2D_16m3b")
 script = ExtResource("3_oxfjf")
 speed = 25
 

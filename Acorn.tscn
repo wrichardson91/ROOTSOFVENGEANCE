@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dfbx4jhlvhglo" path="res://Assets/Trees/acorn.png" id="1_m4sxo"]
 [ext_resource type="Script" path="res://Acorn.gd" id="2_fn43i"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_66dyq"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_thqvk"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cdwne"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vb4j"]
 radius = 4.12311
 
 [node name="RigidBody2D" type="RigidBody2D"]
@@ -13,7 +13,7 @@ gravity_scale = 0.32
 script = ExtResource("2_fn43i")
 
 [node name="RigidShape" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_66dyq")
+shape = SubResource("CircleShape2D_thqvk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(15, 15)
@@ -23,4 +23,4 @@ texture = ExtResource("1_m4sxo")
 [node name="Area2D" type="Area2D" parent="Sprite2D"]
 
 [node name="Area2DShape" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-shape = SubResource("CircleShape2D_cdwne")
+shape = SubResource("CircleShape2D_6vb4j")

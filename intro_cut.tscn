@@ -1371,9 +1371,3 @@ script = ExtResource("8_jsd0t")
 [node name="Man" parent="." instance=ExtResource("12_sy8fi")]
 position = Vector2(893, 385)
 scale = Vector2(2.5, 2.5)
-
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 6.5
-one_shot = true
-
-[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
