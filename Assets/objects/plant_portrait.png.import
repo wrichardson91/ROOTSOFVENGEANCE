@@ -2,23 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r6poftge6dai"
-path="res://.godot/imported/woman_dedinwater.png-c7c34df83a3880e63fa71eecc37fa29d.ctex"
+uid="uid://bwk05blfbbmi3"
+path="res://.godot/imported/plant_portrait.png-17cc8e8876bba336c7c8162f1aec420f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/NPC/woman_dedinwater.png"
-dest_files=["res://.godot/imported/woman_dedinwater.png-c7c34df83a3880e63fa71eecc37fa29d.ctex"]
+source_file="res://Assets/objects/plant_portrait.png"
+dest_files=["res://.godot/imported/plant_portrait.png-17cc8e8876bba336c7c8162f1aec420f.ctex"]
 
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

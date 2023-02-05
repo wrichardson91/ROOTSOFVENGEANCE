@@ -3,17 +3,13 @@ extends Path2D
 #@onready var path_follow = get_child(0)
 @onready var man = $PathFollow2D.get_child(0)
 
-
 @export var speed = 150
 @export var idle_end = false
 var move_direction = 0
 
 
 func _physics_process(delta):
-	MovementLoop(delta)
-
-func _process(delta):
-	AnimationLoop()
+	pass
 
 func MovementLoop(delta):
 	if $PathFollow2D.progress_ratio < 1:
