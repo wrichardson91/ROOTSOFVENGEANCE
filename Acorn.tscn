@@ -3,28 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://dfbx4jhlvhglo" path="res://Assets/Trees/acorn.png" id="1_m4sxo"]
 [ext_resource type="Script" path="res://Acorn.gd" id="2_fn43i"]
 
-<<<<<<< HEAD
-[sub_resource type="CircleShape2D" id="CircleShape2D_qlv0n"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qk0vb"]
-radius = 4.12311
-=======
 [sub_resource type="CircleShape2D" id="CircleShape2D_6y1tc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5dmar"]
 radius = 2.69948
->>>>>>> b4307ab89a5793b8e1cac3a8a9fd10b3d078c0eb
 
 [node name="RigidBody2D" type="RigidBody2D"]
 gravity_scale = 0.32
 script = ExtResource("2_fn43i")
 
 [node name="RigidShape" type="CollisionShape2D" parent="."]
-<<<<<<< HEAD
-shape = SubResource("CircleShape2D_qlv0n")
-=======
 shape = SubResource("CircleShape2D_6y1tc")
->>>>>>> b4307ab89a5793b8e1cac3a8a9fd10b3d078c0eb
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(5.5, 5.5)
@@ -37,8 +26,4 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Area2DShape" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-<<<<<<< HEAD
-shape = SubResource("CircleShape2D_qk0vb")
-=======
 shape = SubResource("CircleShape2D_5dmar")
->>>>>>> b4307ab89a5793b8e1cac3a8a9fd10b3d078c0eb
