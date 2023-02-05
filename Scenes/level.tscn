@@ -1226,15 +1226,15 @@ scale = Vector2(2.75, 2.75)
 texture = ExtResource("1_xm3cv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(579, 323)
-limit_left = 0
+position = Vector2(578.431, 323)
+limit_left = -200
 limit_top = 0
-limit_right = 1160
-limit_bottom = 640
+limit_right = 1500
 limit_smoothed = true
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
-drag_vertical_enabled = true
+drag_horizontal_offset = -0.87
+drag_left_margin = 0.05
 script = ExtResource("7_nsvh7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

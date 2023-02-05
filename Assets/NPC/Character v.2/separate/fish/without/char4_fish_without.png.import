@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/char4_fish_without.png-d6db8a6c7bac20d8f0a04d
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

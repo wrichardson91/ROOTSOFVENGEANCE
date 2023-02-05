@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/wavy_water.png-fb7b43f37310b76e94d1adee05630d
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

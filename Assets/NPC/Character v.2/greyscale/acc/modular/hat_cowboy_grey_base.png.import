@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/hat_cowboy_grey_base.png-b8caf33d02eb2cdeff1d
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

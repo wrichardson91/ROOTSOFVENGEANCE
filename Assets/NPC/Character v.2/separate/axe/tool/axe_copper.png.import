@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/axe_copper.png-1218d917a1c818ec11b933a1aedbd5
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
