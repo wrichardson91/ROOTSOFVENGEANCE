@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://4wsnwc8pmipf"]
+[gd_scene load_steps=23 format=3 uid="uid://4wsnwc8pmipf"]
 
 [ext_resource type="Script" path="res://intro_cut.gd" id="1_8kr57"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="2_apa28"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://5xal3bchsiv8" path="res://Scenes/house interactions.tscn" id="10_ri5g8"]
 [ext_resource type="PackedScene" uid="uid://ddvw5yivgfx2s" path="res://Scenes/PottedPlant.tscn" id="11_8a6q4"]
 [ext_resource type="PackedScene" uid="uid://7pnha82f82m7" path="res://Scenes/Man.tscn" id="12_sy8fi"]
-[ext_resource type="Script" path="res://Scenes/Man.gd" id="13_44nrr"]
 [ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="13_si86q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
@@ -1307,13 +1306,7 @@ _data = {
 "RESET": SubResource("Animation_0ve7l")
 }
 
-[sub_resource type="Curve2D" id="Curve2D_f6emx"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 964, 480, -45.7293, 0.921877, 45.7293, -0.921877, 1095, 479)
-}
-point_count = 2
-
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_8kr57")
 
 [node name="Sky Box" type="Sprite2D" parent="."]
@@ -1375,16 +1368,6 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("8_jsd0t")
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2(-77, -95)
-curve = SubResource("Curve2D_f6emx")
-script = ExtResource("13_44nrr")
-speed = 25
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(964, 480)
-rotates = false
-loop = false
-
-[node name="Man" parent="Path2D/PathFollow2D" instance=ExtResource("12_sy8fi")]
+[node name="Man" parent="." instance=ExtResource("12_sy8fi")]
+position = Vector2(893, 385)
 scale = Vector2(2.5, 2.5)

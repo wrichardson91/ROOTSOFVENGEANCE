@@ -9,7 +9,11 @@ var move_direction = 0
 
 
 func _physics_process(delta):
-	pass
+	MovementLoop(delta)
+	
+func _process(_delta):
+	AnimationLoop()
+
 
 func MovementLoop(delta):
 	if $PathFollow2D.progress_ratio < 1:

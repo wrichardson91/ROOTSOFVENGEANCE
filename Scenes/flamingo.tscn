@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://boks4s763p8xx"]
+
+[ext_resource type="Script" path="res://Scenes/flamingo.gd" id="1_6pobm"]
+[ext_resource type="Texture2D" uid="uid://doa2e4bf6s5yg" path="res://Assets/scenery/flamingo.png" id="1_vsfde"]
+[ext_resource type="AudioStream" uid="uid://bjsarbkvltvp8" path="res://Audio/SFX/AcornPebble Thud/single-rock-hitting-wood-4-103705.mp3" id="3_cu4hr"]
+
+[node name="Node2D" type="Area2D"]
+collision_layer = 3
+collision_mask = 7
+script = ExtResource("1_6pobm")
+
+[node name="Flamingo" type="Sprite2D" parent="."]
+position = Vector2(18.6, -14.7)
+texture = ExtResource("1_vsfde")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(16.6, -14.7)
+polygon = PackedVector2Array(-10, 65, -42, 65, -26, 31, -52, 31, -60, 26, -34, 3, -10, 5, -16, -17, -4, -35, 11, -36, 21, -26, 22, -13, 5, -18, 9, 7)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(18.6, -14.7)
+stream = ExtResource("3_cu4hr")
+volume_db = -0.533
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
