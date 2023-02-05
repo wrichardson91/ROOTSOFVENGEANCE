@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnob615h385g7"
-path="res://.godot/imported/pool_idle.png-da101f5deb983e33b95f4590ae6acf0f.ctex"
+uid="uid://bp0i4b3jgm84u"
+path="res://.godot/imported/shed.png-e46d759a22ad8033f09f1e1920d91c40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Water/pool_idle.png"
-dest_files=["res://.godot/imported/pool_idle.png-da101f5deb983e33b95f4590ae6acf0f.ctex"]
+source_file="res://Assets/scenery/shed.png"
+dest_files=["res://.godot/imported/shed.png-e46d759a22ad8033f09f1e1920d91c40.ctex"]
 
 [params]
 

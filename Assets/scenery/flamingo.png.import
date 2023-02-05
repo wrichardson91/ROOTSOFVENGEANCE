@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnob615h385g7"
-path="res://.godot/imported/pool_idle.png-da101f5deb983e33b95f4590ae6acf0f.ctex"
+uid="uid://cmh7l2a8buvyy"
+path="res://.godot/imported/flamingo.png-64ba5899bc6212376acf0cb45a67632f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Water/pool_idle.png"
-dest_files=["res://.godot/imported/pool_idle.png-da101f5deb983e33b95f4590ae6acf0f.ctex"]
+source_file="res://Assets/scenery/flamingo.png"
+dest_files=["res://.godot/imported/flamingo.png-64ba5899bc6212376acf0cb45a67632f.ctex"]
 
 [params]
 

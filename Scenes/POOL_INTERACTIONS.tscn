@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://2mijc3swp2ud"]
+
+[ext_resource type="Texture2D" uid="uid://dnob615h385g7" path="res://Assets/Water/pool_idle.png" id="1_b0hkr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp5f7"]
+atlas = ExtResource("1_b0hkr")
+region = Rect2(3, 3, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efan7"]
+atlas = ExtResource("1_b0hkr")
+region = Rect2(326, 3, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3erxr"]
+atlas = ExtResource("1_b0hkr")
+region = Rect2(649, 3, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf0g8"]
+atlas = ExtResource("1_b0hkr")
+region = Rect2(972, 3, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmgdl"]
+atlas = ExtResource("1_b0hkr")
+region = Rect2(1295, 3, 320, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e44f"]
+atlas = ExtResource("1_b0hkr")
+region = Rect2(1618, 3, 320, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mi66d"]
+animations = [{
+"frames": [SubResource("AtlasTexture_tp5f7"), SubResource("AtlasTexture_efan7"), SubResource("AtlasTexture_3erxr"), SubResource("AtlasTexture_jf0g8"), SubResource("AtlasTexture_mmgdl"), SubResource("AtlasTexture_5e44f")],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="POOL_INTERACTIONS" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 32)
+frames = SubResource("SpriteFrames_mi66d")
+playing = true
