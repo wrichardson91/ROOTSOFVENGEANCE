@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,13 +11,11 @@ func _process(delta):
 	pass
 
 
-
 func _on_area_2d_body_entered(body):
-	body.call_deferred("set_freeze_mode", 0)
-	body.call_deferred("set_freeze_enabled", true)
 	print(body)
-	if EventManager.plantWateredOnce:
-		EventManager.lea
-func _on_area_2d_body_leaving(body):
+	#Dialogic.start("res://Dialogue Docs/pot_conv1.dtl")
+
+
+func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	EventManager.HitPlantWithAcorn()
 	
-	pass

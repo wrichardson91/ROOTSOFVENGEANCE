@@ -1,9 +1,9 @@
 extends Path2D
 
 #@onready var path_follow = get_child(0)
-@onready var man = $PathFollow2D.get_child(0)
+@onready var woman = $PathFollow2D.get_child(0)
 
-@export var speed = 35
+@export var speed = 150
 @export var idle_end = false
 var move_direction = 0
 
@@ -17,9 +17,9 @@ func _process(_delta):
 
 func MovementLoop(delta):
 	if $PathFollow2D.progress_ratio < 1:
-		var prepos = man.get_global_position()
+		var prepos = woman.get_global_position()
 		$PathFollow2D.set_progress($PathFollow2D.progress + speed * delta)
-		var pos = man.get_global_position()
+		var pos = woman.get_global_position()
 		move_direction = (pos.angle_to_point(prepos) / 3.14)*180
 	if $PathFollow2D.progress_ratio == 1 and not idle_end and not $PathFollow2D.loop:
 		queue_free()
@@ -41,6 +41,6 @@ func AnimationLoop():
 		else :
 			animation = "idle_left"
 	
-	man.playanimation(animation)
+	woman.playanimation(animation)
 
 
