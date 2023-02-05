@@ -48,11 +48,13 @@ func _process(delta):
 func hitWindowWithAcorn():
 	windowCounter += 1
 	didKnockOnWindow = true
+	print("pow", windowCounter, didKnockOnWindow)
 	emit_signal("AcornHitWindow")
 	
 func HitPlantWithAcorn():
 	plantCounter += 1
 	didHitPlant = true
+	print("pow", plantCounter, didHitPlant)
 	emit_signal("AcornHitPlant")
 
 func LadyIsAtWater():

@@ -1,7 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://cq2kwjssaei20"]
+[gd_scene load_steps=28 format=3 uid="uid://cq2kwjssaei20"]
 
 [ext_resource type="Script" path="res://Scenes/main_menu_ui.gd" id="1_k10aj"]
-[ext_resource type="AudioStream" uid="uid://dxa6twixd3kni" path="res://Audio/SFX/Menu UI/Click.wav" id="2_qrsdn"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="3_4p7b6"]
 [ext_resource type="Texture2D" uid="uid://dq3xq06ln6ggw" path="res://Assets/Grass/grasstileset.png" id="4_cjc64"]
 [ext_resource type="Texture2D" uid="uid://d32fplllgveex" path="res://Assets/Water/Water+.png" id="5_obi86"]
@@ -1239,7 +1238,6 @@ grow_vertical = 2
 script = ExtResource("1_k10aj")
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_qrsdn")
 
 [node name="Sky Box" type="Sprite2D" parent="."]
 position = Vector2(601, 103)
@@ -1420,7 +1418,6 @@ position = Vector2(925, 388)
 scale = Vector2(2.5, 2.5)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.059
 anchor_top = 0.75
@@ -1432,15 +1429,17 @@ offset_right = 797.032
 offset_bottom = -301.0
 
 [node name="Start Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+offset_right = 152.0
+offset_bottom = 31.0
 text = "Start"
 
 [node name="Options Button" type="Button" parent="VBoxContainer"]
 visible = false
-layout_mode = 2
 
 [node name="Quit Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+offset_top = 35.0
+offset_right = 152.0
+offset_bottom = 66.0
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]

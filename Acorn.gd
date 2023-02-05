@@ -9,7 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
 func launch(force: Vector2):
-	print("FORCE-------------", force )
 	$".".apply_impulse(force)
 

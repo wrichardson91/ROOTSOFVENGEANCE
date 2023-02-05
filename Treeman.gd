@@ -40,8 +40,8 @@ func _input(event):
 			leaf_instance.position = event.position
 			add_child(leaf_instance) 
 		else:
-			acorn_spawned = false
-			acorn_launch = true			
+			leaf_spawned = false
+			leaf_launch = true			
 			
 		# middle click
 		if event.pressed and event.button_index == 3:

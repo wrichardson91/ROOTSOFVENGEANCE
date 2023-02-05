@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dqna8pp22bnpx" path="res://Assets/Trees/leaves.png" id="2_2c0qo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bx6tv"]
-radius = 29.6142
+radius = 16.0312
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l2qgj"]
-radius = 29.1548
+radius = 17.0294
 
 [node name="Leaf" type="RigidBody2D"]
 script = ExtResource("1_lc23q")
@@ -21,4 +21,5 @@ shape = SubResource("CircleShape2D_bx6tv")
 shape = SubResource("CircleShape2D_l2qgj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.71875, 0.71875)
 texture = ExtResource("2_2c0qo")
