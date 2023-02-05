@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq2kwjssaei20"]
+[gd_scene load_steps=3 format=3 uid="uid://cq2kwjssaei20"]
 
 [ext_resource type="Script" path="res://Scenes/main_menu_ui.gd" id="1_k10aj"]
+[ext_resource type="AudioStream" uid="uid://dxa6twixd3kni" path="res://Audio/SFX/Menu UI/Click.wav" id="2_qrsdn"]
 
 [node name="Main Menu UI" type="Control"]
 layout_mode = 3
@@ -12,7 +13,8 @@ grow_vertical = 2
 script = ExtResource("1_k10aj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.059
 anchor_top = 0.75
 anchor_right = 0.105
@@ -31,6 +33,9 @@ layout_mode = 2
 [node name="Quit Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qrsdn")
 
 [connection signal="pressed" from="VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
