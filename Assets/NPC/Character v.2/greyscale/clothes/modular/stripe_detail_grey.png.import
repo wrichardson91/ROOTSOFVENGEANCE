@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/stripe_detail_grey.png-6e2781cd2c3c14464caecc
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

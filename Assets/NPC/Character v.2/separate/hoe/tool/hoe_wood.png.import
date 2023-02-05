@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/hoe_wood.png-b233395463216d3eef3e77b8d6933384
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

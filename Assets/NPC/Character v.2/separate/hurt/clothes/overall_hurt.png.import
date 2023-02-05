@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/overall_hurt.png-51838e9f8c9c2302522a76cd30af
 [params]
 
 compress/mode=0
-compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
+compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
