@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c5lh4ul3sq85o"]
+[gd_scene load_steps=14 format=3 uid="uid://c5lh4ul3sq85o"]
 
 [ext_resource type="Texture2D" uid="uid://db173retfmh3t" path="res://Assets/objects/grill.png" id="1_6vfp2"]
 [ext_resource type="Script" path="res://Scenes/grill.gd" id="2_1pomn"]
+[ext_resource type="AudioStream" uid="uid://c8ecbxdbb6j3e" path="res://Audio/SFX/Clattering (Misc)/lid_open.wav" id="3_twigy"]
+[ext_resource type="AudioStream" uid="uid://crwwoqkgqpv2p" path="res://Audio/SFX/Clattering (Misc)/lid_close.wav" id="4_su50c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jl4p5"]
 atlas = ExtResource("1_6vfp2")
@@ -46,41 +48,41 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti2l7"]
-size = Vector2(25, 20)
+size = Vector2(26.5, 22)
 
-[sub_resource type="GDScript" id="GDScript_i22e4"]
-script/source = "extends CollisionShape2D
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7tak"]
+size = Vector2(24.75, 22.5)
 
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+[node name="grill" type="Node2D" parent="."]
+script = ExtResource("2_1pomn")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_area_2d_body_entered(body):
-	pass # Replace with function body.
-"
-
-[node name="grill" type="Node2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="grill"]
 frames = SubResource("SpriteFrames_68hxi")
 animation = &"closed"
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_1pomn")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="grill/AnimatedSprite2D"]
 root_node = NodePath("../..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 4)
-shape = SubResource("RectangleShape2D_ti2l7")
-script = SubResource("GDScript_i22e4")
+[node name="Area2D" type="Area2D" parent="grill"]
+collision_layer = 3
+collision_mask = 3
 
-[connection signal="body_entered" from="Area2D" to="Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grill/Area2D"]
+position = Vector2(0.75, 4)
+shape = SubResource("RectangleShape2D_ti2l7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="grill"]
+stream = ExtResource("3_twigy")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="grill"]
+stream = ExtResource("4_su50c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_p7tak")
+
+[connection signal="body_entered" from="grill/Area2D" to="grill" method="_on_area_2d_body_entered"]

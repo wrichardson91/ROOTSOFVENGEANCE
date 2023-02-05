@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://snr5gao5khkt"
+path="res://.godot/imported/lid_close.ogg-ca956a1b69a7d75ff09321927556e061.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Clattering (Misc)/lid_close.ogg"
+dest_files=["res://.godot/imported/lid_close.ogg-ca956a1b69a7d75ff09321927556e061.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

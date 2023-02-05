@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://crwwoqkgqpv2p"
+path="res://.godot/imported/lid_close.wav-33a65d91828a898cf56a8f9edecf761e.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Clattering (Misc)/lid_close.wav"
+dest_files=["res://.godot/imported/lid_close.wav-33a65d91828a898cf56a8f9edecf761e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

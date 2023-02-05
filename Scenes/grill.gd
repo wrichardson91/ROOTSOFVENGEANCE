@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 var isOpen = false
 
@@ -11,13 +11,16 @@ func _ready():
 func _process(delta):
 	pass
 
-func on_body_entered(body):
+func _on_area_2d_body_entered(body):
+	print("HIT GRILL BAM BAM")
 	if(isOpen == true):
-		$".".play("closed")
+		$AnimatedSprite2D.play("closed")
 		print("it was open, now closed")
-	else:
+		$AudioStreamPlayer.play()
 		isOpen = false
-		$".".play("open")
+	else:
+		$AnimatedSprite2D.play("open")
+		$AudioStreamPlayer2.play()
 		print("it was closed, now opened")
-	
-	
+		isOpen = true
+	pass # Replace with function body.
