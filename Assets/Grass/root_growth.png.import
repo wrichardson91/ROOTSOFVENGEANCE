@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnob615h385g7"
-path="res://.godot/imported/pool_idle.png-da101f5deb983e33b95f4590ae6acf0f.ctex"
+uid="uid://c5c72wirmr2te"
+path="res://.godot/imported/root_growth.png-baac50e6b275b34a2b849c74e6bb28c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Water/pool_idle.png"
-dest_files=["res://.godot/imported/pool_idle.png-da101f5deb983e33b95f4590ae6acf0f.ctex"]
+source_file="res://Assets/Grass/root_growth.png"
+dest_files=["res://.godot/imported/root_growth.png-baac50e6b275b34a2b849c74e6bb28c0.ctex"]
 
 [params]
 
