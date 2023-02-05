@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://db63smitvkql1"]
+
+[ext_resource type="Texture2D" uid="uid://cy6drekp24fst" path="res://Assets/house/window panes.png" id="1_4cjxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yv7sm"]
+size = Vector2(26, 19)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_4cjxf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(53, 40.5)
+shape = SubResource("RectangleShape2D_yv7sm")

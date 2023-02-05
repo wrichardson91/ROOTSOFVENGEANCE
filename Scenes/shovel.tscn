@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdatmkbkdfvqk"]
+
+[ext_resource type="Script" path="res://Scenes/shovel.gd" id="1_1arjt"]
+[ext_resource type="Texture2D" uid="uid://2n2c0umv2xl7" path="res://Assets/objects/shovel.png" id="2_c44vw"]
+[ext_resource type="AudioStream" uid="uid://bjsarbkvltvp8" path="res://Audio/SFX/AcornPebble Thud/single-rock-hitting-wood-4-103705.mp3" id="3_f2e7p"]
+
+[node name="Node2D" type="Area2D"]
+collision_layer = 3
+collision_mask = 7
+script = ExtResource("1_1arjt")
+
+[node name="Shovel" type="Sprite2D" parent="."]
+position = Vector2(18.6, -14.7)
+rotation = -0.7662
+texture = ExtResource("2_c44vw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(18.6, -14.7)
+stream = ExtResource("3_f2e7p")
+volume_db = -0.533
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(17, 1, 12, -4, 14, -11, 15, -23, 16, -33, 22, -32, 24, -24, 21, -15, 24, -9, 24, -2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

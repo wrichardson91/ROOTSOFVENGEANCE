@@ -14,9 +14,13 @@ func walkout():
 	add_child(womanwalk)
 	var manwalk = walkloadman.instantiate()
 	add_child(manwalk)
+	$Timer2.start()
 
 func _process(delta):
 	pass
 
 func calldialog():
 	Dialogic.start("couple_talk1")
+
+func _on_timer_2_timeout():
+	get_tree().change_scene_to_file("res://Scenes/level.tscn")

@@ -1,15 +1,18 @@
-extends RigidBody2D
+extends Node
 
-var gravityOff: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
-
+	$Sprite2D.hframes = 4
+	var leaf_texture = randi() % 3
+	
+	match(leaf_texture):
+		0:
+			$Sprite2D.frame = 0
+		1:
+			$Sprite2D.frame = 1
+		2:
+			$Sprite2D.frame = 2 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-func launch(force: Vector2):
-	print("FORCE-------------", force )
-	$".".apply_impulse(force)
-
