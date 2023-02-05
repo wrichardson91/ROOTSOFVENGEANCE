@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://boks4s763p8xx"]
 
 [ext_resource type="Script" path="res://Scenes/flamingo.gd" id="1_6pobm"]
-[ext_resource type="Texture2D" uid="uid://doa2e4bf6s5yg" path="res://Assets/scenery/flamingo.png" id="1_vsfde"]
+[ext_resource type="Texture2D" uid="uid://cmh7l2a8buvyy" path="res://Assets/scenery/flamingo.png" id="1_vsfde"]
 [ext_resource type="AudioStream" uid="uid://bjsarbkvltvp8" path="res://Audio/SFX/AcornPebble Thud/single-rock-hitting-wood-4-103705.mp3" id="3_cu4hr"]
 
 [node name="Node2D" type="Area2D"]
