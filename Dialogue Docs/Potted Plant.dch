@@ -10,7 +10,7 @@
 "default_portrait": "New portrait",
 "description": "plant",
 "display_name": "Potted Plant",
-"mirror": true,
+"mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {

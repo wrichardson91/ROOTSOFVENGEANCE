@@ -14,6 +14,3 @@ func launch(force: Vector2):
 	print("FORCE-------------", force )
 	$".".apply_impulse(force)
 
-func freeze():
-	$".".freeze_mode = 1
-	pass

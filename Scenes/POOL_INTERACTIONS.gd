@@ -13,5 +13,9 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	body.freeze()
-	pass # Replace with function body.
+	body.call_deferred("set_freeze_mode", 0)
+	body.call_deferred("set_freeze_enabled", true)
+
+func _on_area_2d_body_leaving(body):
+	
+	pass
