@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btp25nsxqpsvp"
+path="res://.godot/imported/shit gets real.ogg-a6c4a8743645ea621e3826fc0cbfadea.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/shit gets real.ogg"
+dest_files=["res://.godot/imported/shit gets real.ogg-a6c4a8743645ea621e3826fc0cbfadea.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=120.0
+beat_count=0
+bar_beats=4
