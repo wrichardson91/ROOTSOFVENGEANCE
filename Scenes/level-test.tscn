@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://rg1pkg5kpdsv"]
+[gd_scene load_steps=21 format=3 uid="uid://bs2tenmjy1tdx"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_vants"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="2_lr0fo"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="8_qj4us"]
 [ext_resource type="PackedScene" uid="uid://7pnha82f82m7" path="res://Scenes/Man.tscn" id="9_ay243"]
 [ext_resource type="Script" path="res://Scenes/Man.gd" id="10_h7bqf"]
+[ext_resource type="Script" path="res://Scenes/Woman.gd" id="10_wmr7o"]
+[ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="11_qapdj"]
+[ext_resource type="Script" path="res://Scenes/AnimationWoman.gd" id="12_cyjea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
 texture = ExtResource("3_4i05y")
@@ -1206,9 +1209,15 @@ sources/3 = SubResource("TileSetAtlasSource_splv5")
 
 [sub_resource type="Curve2D" id="Curve2D_07dk8"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 964, 480, -0.890899, -60.1357, 0.890899, 60.1357, 1069, 486, -25.2556, 51.6337, 25.2556, -51.6337, 941, 517, 47.6631, -92.208, -47.6631, 92.208, 882, 466, -147.444, 42.7631, 147.444, -42.7631, 791, 445, -119.965, 51.2192, 119.965, -51.2192, 899, 497)
+"points": PackedVector2Array(43.9677, -96.9408, -43.9677, 96.9408, 1052, 400, 0, 0, 0, 0, 972, 415, 97.4705, -7.94597, -97.4705, 7.94597, 874, 391, 53.8538, -44.6425, -53.8538, 44.6425, 682, 412)
 }
-point_count = 6
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_r4u58"]
+_data = {
+"points": PackedVector2Array(43.9677, -96.9408, -43.9677, 96.9408, 1068, 439, 65.6867, 21.1892, -65.6867, -21.1892, 874, 490, 48.2055, -2.11892, -48.2055, 2.11892, 600, 472, 4.05907, -47.8209, -4.05907, 47.8209, 528, 511)
+}
+point_count = 4
 
 [node name="Level-test" type="Node2D"]
 script = ExtResource("1_vants")
@@ -1242,14 +1251,29 @@ script = ExtResource("8_qj4us")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="ManPath" type="Path2D" parent="."]
 position = Vector2(0.00012207, 0)
 curve = SubResource("Curve2D_07dk8")
 script = ExtResource("10_h7bqf")
+idle_end = true
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(964, 480)
+[node name="PathFollow2D" type="PathFollow2D" parent="ManPath"]
+position = Vector2(1052, 400)
 rotates = false
 loop = false
 
-[node name="Man" parent="Path2D/PathFollow2D" instance=ExtResource("9_ay243")]
+[node name="Man" parent="ManPath/PathFollow2D" instance=ExtResource("9_ay243")]
+
+[node name="WomanPath" type="Path2D" parent="."]
+position = Vector2(0.00024414, 0)
+curve = SubResource("Curve2D_r4u58")
+script = ExtResource("10_wmr7o")
+idle_end = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="WomanPath"]
+position = Vector2(1068, 439)
+rotates = false
+loop = false
+
+[node name="Woman" parent="WomanPath/PathFollow2D" instance=ExtResource("11_qapdj")]
+script = ExtResource("12_cyjea")
