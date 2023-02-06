@@ -1388,7 +1388,7 @@ position = Vector2(1040, 483)
 scale = Vector2(0.65, 0.65)
 
 [node name="Flamingo2" parent="." instance=ExtResource("14_41p8l")]
-position = Vector2(961, 541)
+position = Vector2(949, 542)
 scale = Vector2(0.65, 0.65)
 
 [node name="Flamingo3" parent="." instance=ExtResource("14_41p8l")]
