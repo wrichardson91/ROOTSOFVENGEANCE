@@ -1,75 +1,74 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnn5kghrcougq"]
+[gd_scene load_steps=13 format=3 uid="uid://bnn5kghrcougq"]
 
 [ext_resource type="Script" path="res://Scenes/Woman.gd" id="2_lwute"]
 [ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="3_o0sfy"]
-[ext_resource type="Script" path="res://Scenes/AnimationWoman.gd" id="4_aoxs2"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfd1h"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odmpr"]
 radius = 8.0
 height = 26.0
 
-[sub_resource type="Animation" id="Animation_6utsl"]
+[sub_resource type="Animation" id="Animation_t8kcc"]
 length = 0.001
 
-[sub_resource type="Animation" id="Animation_x7h1g"]
+[sub_resource type="Animation" id="Animation_p0ydh"]
 resource_name = "idle_left"
 length = 0.1
 
-[sub_resource type="Animation" id="Animation_fymw5"]
+[sub_resource type="Animation" id="Animation_lwxmc"]
 resource_name = "idle_right"
 length = 0.1
 
-[sub_resource type="Animation" id="Animation_ofx4y"]
+[sub_resource type="Animation" id="Animation_6f1fc"]
 resource_name = "walk_down"
 length = 0.8
 loop_mode = 1
 
-[sub_resource type="Animation" id="Animation_wmnxt"]
+[sub_resource type="Animation" id="Animation_pt3ri"]
 resource_name = "walk_left"
 length = 0.8
 loop_mode = 1
 
-[sub_resource type="Animation" id="Animation_eprq0"]
+[sub_resource type="Animation" id="Animation_hy47c"]
 resource_name = "walk_right"
 length = 0.8
 loop_mode = 1
 
-[sub_resource type="Animation" id="Animation_1jnlq"]
+[sub_resource type="Animation" id="Animation_n7ved"]
 resource_name = "walk_up"
 length = 0.8
 loop_mode = 1
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_angvb"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f8v48"]
 _data = {
-"RESET": SubResource("Animation_6utsl"),
-"idle_left": SubResource("Animation_x7h1g"),
-"idle_right": SubResource("Animation_fymw5"),
-"walk_down": SubResource("Animation_ofx4y"),
-"walk_left": SubResource("Animation_wmnxt"),
-"walk_right": SubResource("Animation_eprq0"),
-"walk_up": SubResource("Animation_1jnlq")
+"RESET": SubResource("Animation_t8kcc"),
+"idle_left": SubResource("Animation_p0ydh"),
+"idle_right": SubResource("Animation_lwxmc"),
+"walk_down": SubResource("Animation_6f1fc"),
+"walk_left": SubResource("Animation_pt3ri"),
+"walk_right": SubResource("Animation_hy47c"),
+"walk_up": SubResource("Animation_n7ved")
 }
 
-[sub_resource type="Curve2D" id="Curve2D_pyl45"]
+[sub_resource type="Curve2D" id="Curve2D_1jtu6"]
 _data = {
-"points": PackedVector2Array(43.9677, -96.9408, -43.9677, 96.9408, 1068, 439, 65.6867, 21.1892, -65.6867, -21.1892, 874, 490, 48.2055, -2.11892, -48.2055, 2.11892, 600, 472, 4.05907, -47.8209, -4.05907, 47.8209, 528, 511)
+"points": PackedVector2Array(43.9677, -96.9408, -43.9677, 96.9408, 1068, 439, 65.6867, 21.1892, -65.6867, -21.1892, 874, 490, 48.2055, -2.11892, -48.2055, 2.11892, 559, 470)
 }
-point_count = 4
+point_count = 3
 
 [node name="Node2D" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
-shape = SubResource("CapsuleShape2D_rfd1h")
+shape = SubResource("CapsuleShape2D_odmpr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_angvb")
+"": SubResource("AnimationLibrary_f8v48")
 }
 
 [node name="WomanPath" type="Path2D" parent="."]
 position = Vector2(0.00024414, 0)
-curve = SubResource("Curve2D_pyl45")
+curve = SubResource("Curve2D_1jtu6")
 script = ExtResource("2_lwute")
 idle_end = true
 
@@ -80,4 +79,3 @@ loop = false
 
 [node name="Woman" parent="WomanPath/PathFollow2D" instance=ExtResource("3_o0sfy")]
 scale = Vector2(2.5, 2.5)
-script = ExtResource("4_aoxs2")

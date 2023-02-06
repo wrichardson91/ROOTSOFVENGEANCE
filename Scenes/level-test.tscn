@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bs2tenmjy1tdx"]
+[gd_scene load_steps=27 format=3 uid="uid://bs2tenmjy1tdx"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_vants"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="2_lr0fo"]
@@ -12,7 +12,13 @@
 [ext_resource type="Script" path="res://Scenes/Man.gd" id="10_h7bqf"]
 [ext_resource type="Script" path="res://Scenes/Woman.gd" id="10_wmr7o"]
 [ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="11_qapdj"]
-[ext_resource type="Script" path="res://Scenes/AnimationWoman.gd" id="12_cyjea"]
+[ext_resource type="PackedScene" uid="uid://boks4s763p8xx" path="res://Scenes/flamingo.tscn" id="13_gkkjr"]
+[ext_resource type="PackedScene" uid="uid://2mijc3swp2ud" path="res://Scenes/POOL_INTERACTIONS.tscn" id="14_nwjle"]
+[ext_resource type="PackedScene" path="res://evil_plant.tscn" id="15_s5gd3"]
+[ext_resource type="PackedScene" uid="uid://c5lh4ul3sq85o" path="res://Scenes/grill.tscn" id="16_adc3v"]
+[ext_resource type="PackedScene" uid="uid://q7ya3ytrlx13" path="res://Scenes/Shed.tscn" id="17_j1iov"]
+[ext_resource type="PackedScene" uid="uid://bdatmkbkdfvqk" path="res://Scenes/shovel.tscn" id="18_eejnw"]
+[ext_resource type="PackedScene" path="res://Scenes/lawnmower.tscn" id="19_u4iw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
 texture = ExtResource("3_4i05y")
@@ -1276,4 +1282,35 @@ rotates = false
 loop = false
 
 [node name="Woman" parent="WomanPath/PathFollow2D" instance=ExtResource("11_qapdj")]
-script = ExtResource("12_cyjea")
+
+[node name="Flamingo" parent="." instance=ExtResource("13_gkkjr")]
+position = Vector2(1040, 483)
+scale = Vector2(0.65, 0.65)
+
+[node name="Flamingo2" parent="." instance=ExtResource("13_gkkjr")]
+position = Vector2(961, 541)
+scale = Vector2(0.65, 0.65)
+
+[node name="Flamingo3" parent="." instance=ExtResource("13_gkkjr")]
+position = Vector2(1061, 560)
+scale = Vector2(0.65, 0.65)
+
+[node name="POOL_INTERACTIONS" parent="." instance=ExtResource("14_nwjle")]
+position = Vector2(320, 526)
+scale = Vector2(1.4, 2.25)
+
+[node name="EvilPlant" parent="." instance=ExtResource("15_s5gd3")]
+position = Vector2(860, 388)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("16_adc3v")]
+position = Vector2(1127, 441)
+scale = Vector2(1.75, 1.75)
+
+[node name="Node2D" parent="." instance=ExtResource("17_j1iov")]
+position = Vector2(38, 402)
+
+[node name="Node2D2" parent="." instance=ExtResource("18_eejnw")]
+position = Vector2(79, 460)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("19_u4iw3")]
+position = Vector2(319, 392)

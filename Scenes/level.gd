@@ -8,6 +8,7 @@ var womanwalk3 = womanwalk_3.instantiate()
 signal pptimerend
 var planttalk = false
 var ww2walked = false
+var planttalk3 = false
 
 var bgmusic = $AudioStreamPlayer
 var introtimer = $Timer
@@ -22,6 +23,10 @@ func _ready():
 func _process(delta):
 	if EventManager.didKnockOnWindow and EventManager.leafPoolFull:
 		add_child(womanwalk3)
+	if EventManager.ladyHitPool == true and !planttalk3 and EventManager.leafPoolFull:
+		Dialogic.start("pot_conv3")
+		planttalk3 = true
+	
 
 func _input(event):
 	if event is InputEventMouseMotion:
