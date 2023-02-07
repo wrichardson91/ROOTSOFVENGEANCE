@@ -5,19 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="3_p0m31"]
 [ext_resource type="Script" path="res://Scenes/AnimationMan.gd" id="4_nsgse"]
 
-<<<<<<< Updated upstream
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywh7w"]
-radius = 8.0
-height = 26.0
-
-[sub_resource type="Animation" id="Animation_jix3p"]
-=======
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grkxp"]
 radius = 8.0
 height = 26.0
 
 [sub_resource type="Animation" id="Animation_dawvh"]
->>>>>>> Stashed changes
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -32,19 +24,11 @@ tracks/0/keys = {
 "values": [24]
 }
 
-<<<<<<< Updated upstream
-[sub_resource type="Animation" id="Animation_4djhp"]
-resource_name = "idle_left"
-length = 0.1
-
-[sub_resource type="Animation" id="Animation_ql3sc"]
-=======
 [sub_resource type="Animation" id="Animation_ff50s"]
 resource_name = "idle_left"
 length = 0.1
 
 [sub_resource type="Animation" id="Animation_jry5k"]
->>>>>>> Stashed changes
 resource_name = "idle_right"
 length = 0.1
 tracks/0/type = "value"
@@ -60,11 +44,7 @@ tracks/0/keys = {
 "values": [16]
 }
 
-<<<<<<< Updated upstream
-[sub_resource type="Animation" id="Animation_ph3wa"]
-=======
 [sub_resource type="Animation" id="Animation_tjapy"]
->>>>>>> Stashed changes
 resource_name = "walk_down"
 length = 0.8
 loop_mode = 1
@@ -81,11 +61,7 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 0]
 }
 
-<<<<<<< Updated upstream
-[sub_resource type="Animation" id="Animation_50ack"]
-=======
 [sub_resource type="Animation" id="Animation_m3djp"]
->>>>>>> Stashed changes
 resource_name = "walk_left"
 length = 0.8
 loop_mode = 1
@@ -102,11 +78,7 @@ tracks/0/keys = {
 "values": [24, 25, 26, 27, 28, 29, 30, 31, 24]
 }
 
-<<<<<<< Updated upstream
-[sub_resource type="Animation" id="Animation_u3u3u"]
-=======
 [sub_resource type="Animation" id="Animation_ctvfo"]
->>>>>>> Stashed changes
 resource_name = "walk_right"
 length = 0.8
 loop_mode = 1
@@ -123,11 +95,7 @@ tracks/0/keys = {
 "values": [16, 17, 18, 19, 20, 21, 22, 23, 16]
 }
 
-<<<<<<< Updated upstream
-[sub_resource type="Animation" id="Animation_j0ygm"]
-=======
 [sub_resource type="Animation" id="Animation_ebmy5"]
->>>>>>> Stashed changes
 resource_name = "walk_up"
 length = 0.8
 loop_mode = 1
@@ -144,20 +112,6 @@ tracks/0/keys = {
 "values": [9, 10, 11, 12, 13, 14, 15, 16, 8]
 }
 
-<<<<<<< Updated upstream
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdwid"]
-_data = {
-"RESET": SubResource("Animation_jix3p"),
-"idle_left": SubResource("Animation_4djhp"),
-"idle_right": SubResource("Animation_ql3sc"),
-"walk_down": SubResource("Animation_ph3wa"),
-"walk_left": SubResource("Animation_50ack"),
-"walk_right": SubResource("Animation_u3u3u"),
-"walk_up": SubResource("Animation_j0ygm")
-}
-
-[sub_resource type="Curve2D" id="Curve2D_3uf5y"]
-=======
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_im1qx"]
 _data = {
 "RESET": SubResource("Animation_dawvh"),
@@ -170,7 +124,6 @@ _data = {
 }
 
 [sub_resource type="Curve2D" id="Curve2D_73b61"]
->>>>>>> Stashed changes
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 964, 480, 31.8549, 0.128176, -31.8549, -0.128176, 1078, 481)
 }
@@ -180,11 +133,7 @@ point_count = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
-<<<<<<< Updated upstream
-shape = SubResource("CapsuleShape2D_ywh7w")
-=======
 shape = SubResource("CapsuleShape2D_grkxp")
->>>>>>> Stashed changes
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
@@ -195,20 +144,12 @@ frame = 24
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-<<<<<<< Updated upstream
-"": SubResource("AnimationLibrary_sdwid")
-=======
 "": SubResource("AnimationLibrary_im1qx")
->>>>>>> Stashed changes
 }
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-9, -93)
-<<<<<<< Updated upstream
-curve = SubResource("Curve2D_3uf5y")
-=======
 curve = SubResource("Curve2D_73b61")
->>>>>>> Stashed changes
 script = ExtResource("2_mfu54")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]

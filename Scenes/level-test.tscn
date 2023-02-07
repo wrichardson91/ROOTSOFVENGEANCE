@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bs2tenmjy1tdx"]
+[gd_scene load_steps=20 format=3 uid="uid://bs2tenmjy1tdx"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_vants"]
 [ext_resource type="Texture2D" uid="uid://8g82wmrvcqeb" path="res://Assets/Sky/pixil-frame-0 (86).png" id="2_lr0fo"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" path="res://Scenes/Man.gd" id="10_h7bqf"]
 [ext_resource type="Script" path="res://Scenes/Woman.gd" id="10_wmr7o"]
 [ext_resource type="PackedScene" uid="uid://6wcfseu1o757" path="res://Scenes/woman.tscn" id="11_qapdj"]
-[ext_resource type="Script" path="res://Scenes/AnimationWoman.gd" id="12_cyjea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehu3y"]
 texture = ExtResource("3_4i05y")
@@ -1276,4 +1275,3 @@ rotates = false
 loop = false
 
 [node name="Woman" parent="WomanPath/PathFollow2D" instance=ExtResource("11_qapdj")]
-script = ExtResource("12_cyjea")

@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://6wcfseu1o757"]
+[gd_scene load_steps=23 format=3 uid="uid://6wcfseu1o757"]
 
+[ext_resource type="Script" path="res://Scenes/AnimationWoman.gd" id="1_hqi8q"]
 [ext_resource type="Texture2D" uid="uid://c1gt5thuwqmol" path="res://Assets/NPC/Man/female_Sprite Sheet.png" id="1_ld272"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2o6q"]
-radius = 8.0
-height = 26.0
+[ext_resource type="Texture2D" uid="uid://r6poftge6dai" path="res://Assets/NPC/woman_dedinwater.png" id="3_sxv0j"]
 
 [sub_resource type="Animation" id="Animation_lrw7s"]
 length = 0.001
@@ -120,7 +118,59 @@ _data = {
 "walk_up": SubResource("Animation_k6xx1")
 }
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2o6q"]
+radius = 8.0
+height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nwtg7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id6f0"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6047"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ev5i"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdurb"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vl0g"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkw12"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvhpb"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ap1b"]
+atlas = ExtResource("3_sxv0j")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iixsk"]
+animations = [{
+"frames": [SubResource("AtlasTexture_id6f0"), SubResource("AtlasTexture_j6047"), SubResource("AtlasTexture_7ev5i"), SubResource("AtlasTexture_vdurb"), SubResource("AtlasTexture_7vl0g"), SubResource("AtlasTexture_pkw12"), SubResource("AtlasTexture_bvhpb"), SubResource("AtlasTexture_2ap1b")],
+"loop": true,
+"name": &"DEAD",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D4" type="Area2D"]
+script = ExtResource("1_hqi8q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ld272")
@@ -128,11 +178,25 @@ hframes = 8
 vframes = 48
 frame = 24
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
-position = Vector2(0, 4)
-shape = SubResource("CapsuleShape2D_g2o6q")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ow3lf")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_g2o6q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_nwtg7")
+
+[node name="Ded" type="AnimatedSprite2D" parent="."]
+visible = false
+frames = SubResource("SpriteFrames_iixsk")
+animation = &"DEAD"
+playing = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
