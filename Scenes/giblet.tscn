@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2jutc31c1jha"]
+
+[ext_resource type="Script" path="res://Scenes/giblet.gd" id="1_a342j"]
+
+[node name="giblet" type="Node"]
+script = ExtResource("1_a342j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
